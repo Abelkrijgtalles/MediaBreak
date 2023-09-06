@@ -1,4 +1,4 @@
-package com.github.abelkrijgtalles.mediabreak.mixin;
+package nl.abelkrijgtalles.mediabreak.mixin;
 
 import net.minecraft.client.gui.GuiMainMenu;
 import org.spongepowered.asm.mixin.Mixin;

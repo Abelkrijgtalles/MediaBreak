@@ -1,13 +1,15 @@
-package com.github.abelkrijgtalles.mediabreak;
+package nl.abelkrijgtalles.mediabreak;
 
-import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
 @Mod(modid = "mediabreak", useMetadata=true)
-public class ExampleMod {
+public class MediaBreak {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-        System.out.println("Dirt: " + Blocks.dirt.getUnlocalizedName());
+
+        System.out.println("Gemaakt door Abel");
+        System.out.println("Licensed met de GNU Public License v3");
+
     }
 }
