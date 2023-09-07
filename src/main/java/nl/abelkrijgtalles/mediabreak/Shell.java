@@ -58,4 +58,35 @@ public class Shell {
 
     }
 
+    public static String execCommandOutput(String command) {
+
+        ProcessBuilder processBuilder = new ProcessBuilder();
+
+        processBuilder.command("bash", "-c", command);
+
+        try {
+
+            Process process = processBuilder.start();
+
+            StringBuilder output = new StringBuilder();
+
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(process.getInputStream()));
+
+            String line;
+            while ((line = reader.readLine()) != null) {
+                output.append(line).append("\n");
+            }
+
+            process.waitFor();
+
+            return output.toString();
+
+        } catch (IOException | InterruptedException e) {
+
+            return null;
+
+        }
+    }
+
 }
